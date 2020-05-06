@@ -41,10 +41,10 @@ class MyApp:
 
     def create_file_menu(self):
         menu_bar = Menu(self.window)
+        menu_bar.add_cascade(label="Fichier", menu=file_menu)
         file_menu = Menu(menu_bar, tearoff=0)
         file_menu.add_command(label="Quitter", command=self.window.quit)
         file_menu.add_command(label="Nouveau")
-        menu_bar.add_cascade(label="Fichier", menu=file_menu)
         self.window.config(menu=menu_bar)
 
     def create_youtube_button(self):
